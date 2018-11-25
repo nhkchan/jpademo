@@ -1,0 +1,38 @@
+package com.example.nhkchanjpa.jpademo1;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+//import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+//@SpringBootTest
+public class Jpademo1ApplicationTests {
+
+    @Autowired
+    private TestEntityManager entityManager;
+
+    @Autowired
+    private PeopleRepository peoples;
+	
+    @Test
+    public void testFindByLastName() {
+    	/*
+        People people = new People(0, "first", "last");
+        entityManager.persist(people);
+
+        List<People> findByLname = peoples.findByLname(people.getLastName());
+
+        assertThat(findByLname).extracting(People::getLastName).containsOnly(people.getLastName());
+        */
+    }
+
+}
